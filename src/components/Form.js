@@ -43,6 +43,8 @@ class Form extends React.Component {
                     className="form"
                     onSubmit={this.createSmurf}
                 >
+                    {error && <p>{error}</p>}
+                    <h3>Create a New Smurf</h3>
                     <input
                         type="text"
                         name="name"
