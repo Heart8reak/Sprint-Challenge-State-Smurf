@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 export const ADD_SMURF = "ADD_SMURF"
-export const ADD_SMURF_SUCCES = "ADD_SMURF_SUCCES"
-export const ADD_SMURF_FIALED = "ADD_SMURF_FAILED"
+export const ADD_SMURF_SUCCESS = "ADD_SMURF_SUCCES"
+export const ADD_SMURF_FAILED = "ADD_SMURF_FAILED"
 
 export const FETCH_DATA = "FETCH_DATA"
 export const SUCCESS = "SUCCESS"
@@ -18,7 +18,7 @@ export function addSmurf(name, age, height) {
             })
             .catch((err) => {
                 const payload = err.response ? err.response.data : err
-                dispatch({ type: ADD_SMURF_FIALED, payload })
+                dispatch({ type: ADD_SMURF_FAILED, payload })
             })
     }
 }

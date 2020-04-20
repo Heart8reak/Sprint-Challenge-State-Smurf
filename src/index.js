@@ -4,10 +4,24 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import thunk from 'redux-thunk'
+import { createStore, applyMiddleware } from 'redux'
+import { Provider } from 'react-redux'
+import { BrowserRouter } from 'react-router-dom'
+
+import reducers from './redux/reducers/reducers';
+
+const store = createStore(reducers, applyMiddleware(thunk))
+
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
+    <BrowserRouter>
+    <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
+    </BrowserRouter>
+  </Provider>
+,
   document.getElementById('root')
 );
 

@@ -1,7 +1,7 @@
 import { 
     ADD_SMURF_SUCCESS,
     ADD_SMURF_FAILED,
-    FECTH_DATA,
+    FETCH_DATA,
     SUCCESS,
     FAILURE
 } from '../actions/actions'
