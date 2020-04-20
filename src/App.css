@@ -40,3 +40,7 @@ flex-wrap: wrap;
   width: 22%;
   border-radius: 10px;
 }
+
+.smurf h3 span {
+  font-weight: 300;
+}
